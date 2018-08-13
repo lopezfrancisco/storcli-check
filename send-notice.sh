@@ -3,7 +3,6 @@
 mailto="lopez@uci.edu"
 errorsto="lopez@uci.edu"
 scriptdir="/root/raid_check"
-# previous good run of storcli to compare against current output
 masterfile="$scriptdir/raid.master.txt"
 subject="`hostname` RAID check `date +%Y-%m-%d`"
 sendemail="n"

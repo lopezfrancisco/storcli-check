@@ -4,7 +4,10 @@ import difflib
 import re
 import subprocess
 import sys
+import tempfile
 import time
+import transform
+import config_storcli
 
 
 # If this is invoked from cron, let users know the name of the script.
@@ -19,18 +22,16 @@ if len( sys.argv ) != 2:
 mf = sys.argv[1]
 fh = open( mf, "r" )
 
-# Command to generate detailed disk information
-run_cmd = [
-    "/opt/MegaRAID/storcli/storcli64",
-    "/c0/dALL",
-    "show",
-    "all" ]
 
 diffCount = 0
-pOutput = subprocess.Popen( run_cmd, stdout=subprocess.PIPE )
+tmpfh = tempfile.TemporaryFile()
+# Command defined in config_storcli.py file
+pOutput = subprocess.Popen( config_storcli.cmd_detail, stdout=subprocess.PIPE )
+transform.saveOutput( pOutput.stdout, tmpfh )
+tmpfh.seek(0)
 
 # compare the output from a previous run with output from the current run
-for l in difflib.unified_diff( fh.readlines(), pOutput.stdout.readlines(), mf, tofiledate=time.ctime(), n=0 ):
+for l in difflib.unified_diff( fh.readlines(), tmpfh.readlines(), mf, tofiledate=time.ctime(), n=0 ):
     if diffCount == 0:
         print "RAID Changes\n============"
     print l.rstrip()
@@ -41,15 +42,9 @@ diskString = "State :"
 failString = "\APredictive"
 saveString = ""
 
-# Command to generate predictive failures
-run_cmd = [
-    "/opt/MegaRAID/storcli/storcli64",
-    "/c0/eALL/sALL",
-    "show",
-    "all" ]
-
 predictCount = 0
-pOutput = subprocess.Popen( run_cmd, stdout=subprocess.PIPE )
+# Command defined in config_storcli.py file
+pOutput = subprocess.Popen( config_storcli.cmd_predict, stdout=subprocess.PIPE )
 
 # look for predictive failures counts that are not zero
 for line in pOutput.stdout:

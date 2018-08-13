@@ -1,0 +1,158 @@
+CLI Version = 007.0606.0000.0000 Mar 20, 2018
+Operating system = Linux 4.4.0-21-generic
+Controller = 0
+Status = Success
+Description = Show Diskgroup Succeeded
+
+
+TOPOLOGY :
+========
+
+-----------------------------------------------------------------------------
+DG Arr Row EID:Slot DID Type  State BT       Size PDC  PI SED DS3  FSpace TR 
+-----------------------------------------------------------------------------
+ 0 -   -   -        -   Cac0  Optl  N  372.093 GB dflt N  N   none N      N  
+ 0 0   -   -        -   RAID0 Optl  N  372.093 GB dflt N  N   none N      N  
+ 0 0   0   8:11     46  DRIVE Onln  N  372.093 GB dflt N  N   none -      N  
+ 1 -   -   -        -   RAID6 Optl  N  109.152 TB dflt N  N   dflt N      N  
+ 1 0   -   -        -   RAID6 Optl  N  109.152 TB dflt N  N   dflt N      N  
+ 1 0   0   9:0      42  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   1   9:1      14  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   2   9:2      18  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   3   9:3      38  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   4   9:4      41  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   5   9:5      23  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   6   9:6      26  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   7   9:7      21  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   8   9:8      13  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   9   9:9      15  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   10  9:10     10  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   11  9:11     43  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   12  9:12     27  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   13  9:13     24  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   14  9:14     44  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   15  9:15     28  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 1 0   16  9:16     19  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 -   -   -        -   RAID6 Optl  N  109.152 TB dflt N  N   dflt N      N  
+ 2 0   -   -        -   RAID6 Optl  N  109.152 TB dflt N  N   dflt N      N  
+ 2 0   0   9:17     40  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   1   9:18     22  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   2   9:19     29  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   3   9:20     25  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   4   9:21     37  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   5   9:22     34  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   6   9:23     35  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   7   8:0      12  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   8   8:1      17  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   9   8:2      32  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   10  8:3      20  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   11  8:4      16  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   12  8:5      36  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   13  8:6      11  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   14  8:7      39  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   15  8:8      31  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ 2 0   16  8:9      33  DRIVE Onln  N    7.276 TB dflt N  N   dflt -      N  
+ - -   -   8:10     30  DRIVE GHS   -    7.276 TB -    -  -   -    -      N  
+-----------------------------------------------------------------------------
+
+DG=Disk Group Index|Arr=Array Index|Row=Row Index|EID=Enclosure Device ID
+DID=Device ID|Type=Drive Type|Onln=Online|Rbld=Rebuild|Dgrd=Degraded
+Pdgd=Partially degraded|Offln=Offline|BT=Background Task Active
+PDC=PD Cache|PI=Protection Info|SED=Self Encrypting Drive|Frgn=Foreign
+DS3=Dimmer Switch 3|dflt=Default|Msng=Missing|FSpace=Free Space Present
+TR=Transport Ready
+
+
+VD LIST :
+=======
+
+---------------------------------------------------------------
+DG/VD TYPE  State Access Consist Cache Cac sCC       Size Name 
+---------------------------------------------------------------
+0/0   Cac0  Optl  RW     Yes     RWTD  -   ON  372.093 GB      
+1/1   RAID6 Optl  RW     Yes     RWBD  -   ON  109.152 TB      
+2/2   RAID6 Optl  RW     Yes     RWBD  -   ON  109.152 TB      
+---------------------------------------------------------------
+
+Cac=CacheCade|Rec=Recovery|OfLn=OffLine|Pdgd=Partially Degraded|Dgrd=Degraded
+Optl=Optimal|RO=Read Only|RW=Read Write|HD=Hidden|TRANS=TransportReady|B=Blocked|
+Consist=Consistent|R=Read Ahead Always|NR=No Read Ahead|WB=WriteBack|
+AWB=Always WriteBack|WT=WriteThrough|C=Cached IO|D=Direct IO|sCC=Scheduled
+Check Consistency
+
+Total VD Count = 3
+
+DG Drive LIST :
+=============
+
+---------------------------------------------------------------------------------
+EID:Slt DID State DG       Size Intf Med SED PI SeSz Model               Sp Type 
+---------------------------------------------------------------------------------
+8:11     46 Onln   0 372.093 GB SATA SSD N   N  512B INTEL SSDSC2BA400G4 U  -    
+9:0      42 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:1      14 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:2      18 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:3      38 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:4      41 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:5      23 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:6      26 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:7      21 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:8      13 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:9      15 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:10     10 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:11     43 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:12     27 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:13     24 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:14     44 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:15     28 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:16     19 Onln   1   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:17     40 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:18     22 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:19     29 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:20     25 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:21     37 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:22     34 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+9:23     35 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:0      12 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:1      17 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:2      32 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:3      20 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:4      16 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:5      36 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:6      11 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:7      39 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:8      31 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+8:9      33 Onln   2   7.276 TB SAS  HDD N   N  512B HUH728080AL5200     U  -    
+---------------------------------------------------------------------------------
+
+EID-Enclosure Device ID|Slt-Slot No.|DID-Device ID|DG-DriveGroup
+DHS-Dedicated Hot Spare|UGood-Unconfigured Good|GHS-Global Hotspare
+UBad-Unconfigured Bad|Onln-Online|Offln-Offline|Intf-Interface
+Med-Media Type|SED-Self Encryptive Drive|PI-Protection Info
+SeSz-Sector Size|Sp-Spun|U-Up|D-Down/PowerSave|T-Transition|F-Foreign
+UGUnsp-Unsupported|UGShld-UnConfigured shielded|HSPShld-Hotspare shielded
+CFShld-Configured shielded|Cpybck-CopyBack|CBShld-Copyback Shielded
+
+Total Drive Count = 35
+
+UN-CONFIGURED DRIVE LIST :
+========================
+
+----------------------------------------------------------------------------
+EID:Slt DID State DG     Size Intf Med SED PI SeSz Model            Sp Type 
+----------------------------------------------------------------------------
+8:10     30 GHS   -  7.276 TB SAS  HDD N   N  512B HUH728080AL5200  D  -    
+----------------------------------------------------------------------------
+
+EID-Enclosure Device ID|Slt-Slot No.|DID-Device ID|DG-DriveGroup
+DHS-Dedicated Hot Spare|UGood-Unconfigured Good|GHS-Global Hotspare
+UBad-Unconfigured Bad|Onln-Online|Offln-Offline|Intf-Interface
+Med-Media Type|SED-Self Encryptive Drive|PI-Protection Info
+SeSz-Sector Size|Sp-Spun|U-Up|D-Down/PowerSave|T-Transition|F-Foreign
+UGUnsp-Unsupported|UGShld-UnConfigured shielded|HSPShld-Hotspare shielded
+CFShld-Configured shielded|Cpybck-CopyBack|CBShld-Copyback Shielded
+
+Unconfigured Drive Count = 1
+
+
+
