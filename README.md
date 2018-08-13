@@ -47,4 +47,4 @@ appropriate RAID card or without root access.
 
 ### crontab.txt
 
-Sample UNCX cron entry that runs hourly.
+Sample UNIX cron entry that runs hourly.
