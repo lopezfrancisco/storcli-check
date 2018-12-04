@@ -8,7 +8,8 @@ def saveOutput( readfh, writefh ):
     isUnconfiguredHeader = re.compile( "EID:Slt DID State DG     Size Intf Med SED PI SeSz Model            Sp Type " )
     isSeparator = re.compile( "^-+$" )
     
-    for line in readfh.readlines():
+    #for line in readfh.readlines():
+    for line in readfh:
         if convertDriveStatus:
             if isSeparator.match( line ):
                 if separatorCount == 1:
@@ -20,7 +21,7 @@ def saveOutput( readfh, writefh ):
                 if line[36] == "Y":
                     # set background task status to N for topology report
                     line = line[0:36] + "N" + line[37:]
-                elif line[68] == "U":
+                elif line[68] == "U" or line[68] == "T":
                     # set drive spun status to D for un-configured drives report
                     line = line[0:68] + "D" + line[69:]
         else:
