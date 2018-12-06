@@ -8,8 +8,7 @@ def saveOutput( readfh, writefh ):
     isUnconfiguredHeader = re.compile( "EID:Slt DID State DG     Size Intf Med SED PI SeSz Model            Sp Type " )
     isSeparator = re.compile( "^-+$" )
     
-    #for line in readfh.readlines():
-    for line in readfh:
+    for line in readfh.splitlines():
         if convertDriveStatus:
             if isSeparator.match( line ):
                 if separatorCount == 1:
@@ -27,4 +26,4 @@ def saveOutput( readfh, writefh ):
         else:
             if isTopologyHeader.match( line ) or isUnconfiguredHeader.match( line ):
                 convertDriveStatus = True
-        writefh.write( line )
+        writefh.write( line + "\n" )
